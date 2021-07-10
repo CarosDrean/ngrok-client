@@ -2,7 +2,7 @@ const ngrok = require('ngrok');
 
 (async function() {
     const url = await ngrok.connect({
-        configPath: './ngrok.yml',
+        configPath: './ngrok.yaml',
         onLogEvent: data => {
             console.log(data)
         },

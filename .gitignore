@@ -1,4 +1,4 @@
 .idea
 node_modules
 package-lock.json
-ngrok.yaml
+configuration.json

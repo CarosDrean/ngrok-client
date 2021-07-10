@@ -1,3 +1,5 @@
 # NGROK CLIENT
 
-Este proyecto lee un ngrok.yaml y levanta los servicios definidos
+Debe crear un *configuration.json* a partir del *configuration.example.json*.
+
+*El campo puerto aun no esta siendo usado*

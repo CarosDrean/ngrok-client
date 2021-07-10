@@ -1,0 +1,10 @@
+authtoken: 1qqIEk3LduKbB3cJyNzSEsx8AU3_4MoZSTyJCsfXo24rcVDhW
+tunnels:
+  api-results:
+    addr: 127.0.0.1:8000
+    proto: http
+    hostname: api-results.sa.ngrok.io
+  api-inventory:
+    addr: 127.0.0.1:8001
+    proto: http
+    hostname: api-inventory.sa.ngrok.io

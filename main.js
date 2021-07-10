@@ -1,14 +1,33 @@
 const ngrok = require('ngrok');
 
 (async function() {
-    const url = await ngrok.connect({
-        configPath: './ngrok.yaml',
-        onLogEvent: data => {
-            console.log(data)
-        },
+    const authToken = 'token'
+
+    const urlApiResults = await ngrok.connect({
+        proto: 'http',
+        addr: 8000,
+        subdomain: 'api-results',
+        authtoken: authToken,
+        region: 'sa',
     });
-    console.log(url)
-    const api = ngrok.getApi();
-    const tunnels = await api.listTunnels();
-    console.log(tunnels)
+
+    const urlApiInventory = await ngrok.connect({
+        proto: 'http',
+        addr: 8001,
+        subdomain: 'api-inventory',
+        authtoken: authToken,
+        region: 'sa',
+    });
+
+    const urlApiMail = await ngrok.connect({
+        proto: 'http',
+        addr: 2001,
+        subdomain: 'api-mail',
+        authtoken: authToken,
+        region: 'sa',
+    });
+
+    console.log(urlApiResults)
+    console.log(urlApiInventory)
+    console.log(urlApiMail)
 })();

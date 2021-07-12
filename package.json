@@ -6,7 +6,7 @@
   "scripts": {
     "ts:node": "ts-node src/index.ts",
     "start": "node dist/index.js",
-    "dev": "ts-node ./src/cmd/api/main.ts",
+    "dev": "ts-node src/main.ts",
     "clean": "del dist",
     "build": "tsc",
     "test": "jest"

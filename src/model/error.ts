@@ -1,29 +1,18 @@
-export interface MError {
-    code: number
+export interface Error {
+    status: number
     error: any
-    message: string
-    where: string
+    message?: string
+    where?: string
+    data?: any
 }
 
-export class Error implements MError {
-    code: number;
-    error: any;
-    message: string
-    where: string
-
-    constructor(code: number, error: any, message: string = '', where: string) {
-        this.code = code;
-        this.error = error;
-        this.message = message
-        this.where = where
+export class UtilError {
+    static voidError(): Error {
+        return {status: 0, error: '', message: '', where: '', data: ''}
     }
 
-    static voidError(): MError {
-        return {code: 0, error: '', message: '', where: ''}
-    }
-
-    static isVoidError(error: MError): boolean {
-        const voidError = Error.voidError()
-        return error.code == voidError.code && error.error == voidError.error && error.message == voidError.message
+    static isVoidError(error: Error): boolean {
+        const voidError = UtilError.voidError()
+        return error.status == voidError.status && error.error == voidError.error && error.message == voidError.message
     }
 }

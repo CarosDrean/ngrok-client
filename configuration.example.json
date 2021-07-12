@@ -1,14 +1,11 @@
 {
-  "port": 3000,
-  "ngrok": {
-    "authToken": "token",
-    "tunnels": [
-      {
-        "proto": "http",
-        "addr": 80,
-        "region": "sa",
-        "subdomain": "api"
-      }
-    ]
-  }
+  "authToken": "token",
+  "tunnels": [
+    {
+      "proto": "http",
+      "addr": 80,
+      "region": "sa",
+      "subdomain": "api"
+    }
+  ]
 }

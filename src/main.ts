@@ -7,7 +7,7 @@ class Main {
         const config = Config.getConfiguration()
 
         const tunnel = new Tunnel()
-        const [urls, error] = await tunnel.enabledTunnelsByConfig(config)
+        const [urls, error] = await tunnel.connectTunnelsByConfig(config)
         if (!UtilError.isVoidError(error)) {
             console.log(error) // if need inline add stringify
             process.exit()

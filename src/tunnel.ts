@@ -5,7 +5,7 @@ import {UtilError, Error} from "./model/error";
 import {Option, Options} from "./model/model";
 
 export class Tunnel {
-    async enabledTunnelsByConfig(config: Configuration): Promise<[string[], Error]> {
+    async connectTunnelsByConfig(config: Configuration): Promise<[string[], Error]> {
         const options = this.makeOptions(config)
 
         const urls: string[] = []
